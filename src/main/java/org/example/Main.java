@@ -1,5 +1,6 @@
 package org.example;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,6 +8,9 @@ public class Main {
        int[] anArray;
 
        anArray=new int[10];
+       ArrayList<String> names = new ArrayList<String>();
+       //Temporary string to store and print a name
+       String Name;
 
        //Added a scanner to read in user inputs
         Scanner in = new Scanner(System.in);
@@ -27,7 +31,22 @@ public class Main {
         } catch (Exception e) {
             System.out.println("Something went wrong.");
         }
-    }
 
-       /* anArray[10]=scanner.nextInt(); */
+      //Add names to the arraylist names
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+
+        //Prints String at location of array name
+        try {
+            for (x = 0; x < 5; x++) {
+                Name = names.get(x);
+                System.out.println("The name at location " + x + " is " + Name);
+            }
+        }
+        catch(Exception e){
+            System.out.println("ERROR: OUT OF NAMES");
+        }
+
+    }
 }
