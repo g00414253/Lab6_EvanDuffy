@@ -21,7 +21,13 @@ public class Main {
            System.out.println("Element at index " + x + ":" + anArray[x]);
        }
 
-       System.out.println("Please enter a value for anArray[10]: ");
-       /* anArray[10]=scanner.nextInt(); */
+        try {
+            System.out.println("Please enter a value for anArray[10]: ");
+             anArray[10]=in.nextInt();
+        } catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
     }
+
+       /* anArray[10]=scanner.nextInt(); */
 }
